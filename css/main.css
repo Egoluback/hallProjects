@@ -1,0 +1,136 @@
+*{
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+.link-container{
+    display: inline-block;
+    font-size: 2em;
+    margin: 1vw;
+}
+
+header{
+    background: rgb(241, 241, 241);
+    border-radius: 5px;
+}
+
+.link{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.link:hover{
+    color: rgba(0, 0, 0,0.5);
+}
+
+img{
+    margin: 2%;
+}
+
+.block{
+    margin: 1vw;
+    padding: 1vw;
+    background: rgb(241, 241, 241);
+    border-radius: 5px;
+    display: block;
+    float: left;
+    width: 28vw;
+    height: 75vh;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button{
+    display: block;
+    -webkit-appearance: none;
+    border: none;
+    text-decoration: none;
+
+    width: 50%;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(97, 97, 235);
+    font-size: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+
+#catImg{
+    background-image: url('img/catsBig.png');
+}
+
+#treasImg{
+    background-image: url('img/treasuresBig.png');
+}
+
+#raceImg{
+    background-image: url('img/raceBig.png');
+}
+
+#randImg{
+    background-image: url('img/randomizerBig.png');
+}
+
+#snakeImg{
+    background-image: url('img/snakeBig.png');
+}
+
+#storeImg{
+    background-image: url('img/storeBig.png');
+}
+
+.image{
+    width: 100%;
+    height: 75vh;
+}
+
+.content{
+    position: relative;
+    top: 500px;
+    transition: all .6s linear;
+}
+
+.block:hover .content{
+    top: 0;
+}
+
+.block:hover .image{
+    display: none;
+}
+
+.button:hover{
+    background-color: rgb(46, 46, 207);
+}
+
+.title{
+    font-size: 2.5em;
+}
+
+iframe{
+    border: 1px solid gray;
+    width: 100%;
+}
+
+#iframes-container{
+    clear: both;
+}
+
+.block-iframe{
+    float: left;
+    margin: 1vw;
+    padding: 1vw;
+    width: 92vw;
+    height: 80vh;
+    border-radius: 5px;
+    background: rgb(241, 241, 241);
+}

@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Race</title>
+        <link href="https://fonts.googleapis.com/css?family=Play&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+        <link href = "css/main.css" rel = "stylesheet">
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src = "vue.js"></script>
+        <script src = "jshelper/jshelper.js"></script>
+    </head>
+    <body>
+        <div id = "app">
+            <input type = "button" value = "start" @click = "start()">
+            <div id = "text">{{ finisher }}</div>
+            <img src = "img/finishLine.png" id = "finish-line">
+        </div>
+        <script>
+            const jsH = new JsHelper();
+            class Car{
+                constructor(x, y, id, speed, url){
+                    this.x = x;
+                    this.y = y;
+                    this.id = id;
+                    this.speed = speed;
+                    this.roachEl = '';
+                    this.acc = 0;
+                    this.url = url;
+                }
+
+                show(){
+                    const roachImg = '<img src = ' + this.url + ' onclick = "speedUp(' + this.id + ')">';
+                    this.roachEl = $(roachImg);
+                    this.roachEl.css({
+                        width:"200px",
+                        height:"100px",
+                        position:"absolute",
+                        top:this.y,
+                        left:this.x,
+                    });
+                    $('body').append(this.roachEl);
+                }
+
+                draw(){
+                    this.roachEl.css({
+                        top: this.y,
+                        left: this.x
+                    });
+                }
+
+                move(dx){
+                    if (this.x + dx + this.acc >= 700){
+                        return true;
+                    } else{
+                        this.x += dx + this.acc;
+                        return false;
+                    }
+                    
+                }
+
+                speedUp(){
+                    this.acc += 10;
+                }
+            }
+            var obj = new Car(50,150,'obj',5,'img/car1.png');
+                obj.show();
+
+                var obj2 = new Car(50,300,'obj2',5,'img/car2.png');
+                obj2.show();
+
+            const app = new Vue({
+                el: "#app",
+                data: {
+                    finisher: "",
+                    isStoped: false,
+                    isGoing: false
+                },
+                methods: {
+                    start: function(){
+                        const mainInterval = setInterval(() => {
+                            if (obj.move(jsH.getRandNum(2,4))){
+                                clearInterval(mainInterval);
+                                if (!this.isStoped){
+                                    this.finisher = "Первая машина выиграла!";
+                                    this.isStoped = true;
+                                }
+                            }
+
+                            obj.draw();
+
+                            if (obj2.move(jsH.getRandNum(2,4))){
+                                clearInterval(mainInterval);
+                                if (!this.isStoped){
+                                    this.finisher = "Вторая машина выиграла!";
+                                    this.isStoped = true;
+                                }
+                            }
+                            obj2.draw();
+                        },1);
+                    }
+                }
+            });
+
+            function speedUp(id){
+                id.speedUp();
+            }
+    
+                // app.start(obj,obj2);
+            
+            // setInterval(() => {
+            
+            // }, 1000);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+*{
+    outline: none;
+    
+}
+
+body{
+    font-family: Bahnschrift;
+    background-color: rgb(123, 122, 122);
+}
+
+@font-face{
+    font-family: Bahnschrift;
+    src: url(fonts/ofont.ru_Bahnschrift.ttf);
+}
+
+input[type = "button"]{
+    --el-color: rgb(59, 58, 58);
+    -webkit-appearance: none;
+    border: none;
+    display: block;
+
+    cursor: pointer;
+    background: var(--el-color);
+    padding: 0.5%;
+    color: white;
+    font-size: 300%;
+    border-radius: 5px;
+    font-family: Bahnschrift;
+    text-transform: uppercase;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all .2s;
+}
+
+input[type = "button"]:hover{
+    background: rgb(42, 42, 42);
+}
+
+#finish-line{
+    --line-size: 50%;
+    position: absolute;
+    top: 20%;
+    left: 600px;
+    width: var(--line-size);
+    height: var(--line-size);
+    transform: rotate(90deg);
+}
+
+#text{
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 135%;
+    color: white;
+}
+
+#app{
+    background-color: rgb(88, 86, 86);
+    width: 40%;
+    padding: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

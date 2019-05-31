@@ -1,0 +1,65 @@
+section{
+    margin-bottom:15px;
+    margin-bottom:200px;
+}
+
+section form{
+    background-color:rgba(255, 255, 255, 0.8);
+    padding:15px;
+    padding-bottom:25px;
+    border-radius:5px;
+    width:125%;
+    height:250px;
+}
+
+.input{
+    border:none;
+    padding:1px;
+    border-radius:5px;
+    width:200px;
+    font-size:15px;
+    height:30px;
+    position:absolute;
+    left:32%;
+}
+
+#inputs-conteiner{
+    /* float:left; */
+    margin-right:15px;
+}
+
+select{
+    width:200px;
+    border-radius:5px;
+    /* padding:1px; */
+    font-size:15px;
+    height:30px;
+    margin:1px;
+    position:absolute;
+    left:32%;
+}
+
+section form .butt{
+    border:none;
+    padding:1px;
+    border-radius:5px;
+    width:200px;
+    font-size:15px;
+    height:30px;
+    background-color:white;
+    transition:1s;
+}
+
+section form .butt:hover{
+    background-color:rgba(255,255,255,0.5);
+}
+
+.caption{
+    color:black;
+}
+
+section form p iframe{
+    position:relative;
+    top:-240px;
+    left:60%;
+}

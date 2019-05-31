@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Поиск сокровищ на jQuery</title>
+        <link href = "css/main.css" rel = "stylesheet">
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+        <script src="jshelper/jshelper.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+    </head>
+    <body>
+        <div id = "window" title = "Игра - найди клад">Найди клад!</div>
+        <div id = "img-conteiner">
+            <img id = "treasure" src = "treasure.png" width = "10%">
+        </div>
+        <div id = "information">
+            <div id = "main-info">Подсказка:</div>
+            <div id = "info-first"></div>
+            <div id = "info-second"></div>
+        </div>
+
+        <script>
+            const jsH = new JsHelper();
+            const infoConteiner1 = document.getElementById('info-first');
+            const infoConteiner2 = document.getElementById('info-second');
+            const randomPlaceX = jsH.getRandNum(80,670);
+            const randomPlaceY = jsH.getRandNum(80,480);
+            $('#window').dialog();
+            $('#treasure').hide();
+            $('#treasure').offset({left:randomPlaceX,top:randomPlaceY});
+            // $('#treasure').show(100);
+            // setTimeout(() => {
+            //     document.getElementById('treasure').style.opacity = "0;";
+            // },1000);
+
+            $('#img-conteiner').click((event) => {
+                const cursorX = event.offsetX;
+                const cursorY = event.offsetY;
+                console.log("Курсор:" + cursorX + ";" + cursorY);
+                console.log("Правильное место:" + randomPlaceX + ";" + randomPlaceY);
+                console.log(event["toElement"]["id"]);
+                if (event["toElement"]["id"] == "treasure"){
+                    $('#treasure').show(1000);
+                    alert("Вы нашли клад!");
+                }else{
+                    if (cursorX > randomPlaceX){
+                        infoConteiner1.innerHTML = "Левее!";
+                    }else{
+                        infoConteiner1.innerHTML = "Правее!";
+                    }
+                    if (cursorY < randomPlaceY){
+                        infoConteiner2.innerHTML = "Ниже!";
+                    }else{
+                        infoConteiner2.innerHTML = "Выше!";
+                    }
+                }
+            });
+            // $('#treasure').hide();
+            document.getElementById('treasure').style.opacity = "0;";
+
+        </script>
+    </body>
+</html>

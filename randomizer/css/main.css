@@ -1,0 +1,84 @@
+*{
+    outline:none;
+}
+
+body{
+    background-color:rgb(250, 246, 246);
+}
+
+#main{
+    margin-left:30%;
+    margin-top:10%;
+    width:40%;
+    padding:1%;
+    height:auto;
+    background-color:rgb(240, 240, 240);
+    border-radius:5px;
+    box-shadow:0 2px 2px -1px black;
+}
+
+#conteiner{
+    color:rgb(69, 69, 69);
+    font-size:200%;
+}
+
+input{
+    display:block;
+    margin:1%;
+}
+
+input[type = "button"]{
+    width:35%;
+    padding:0.5%;
+    font-size:105%;
+    background-color:rgb(243, 241, 241);
+    border-width:1px;
+    border-color:rgb(199, 199, 199);
+    border-style:solid;
+    border-radius:2px;
+    cursor:pointer;
+    box-shadow:inset 0.5px 0.5px 1px -1px rgb(167, 167, 167);
+    color:#4f4f4f;
+    pointer-events:all;
+}
+
+input[type = "button"]:hover{
+    box-shadow:inset 1.5px 1.5px 1px -1px rgb(167, 167, 167);
+    color:#383838;
+}
+
+input[type = "number"]{
+    width:20%;
+    padding:0.5%;
+    border-style:solid;
+    border-width:1px;
+    border-color:rgb(179, 179, 179);
+}
+
+input[type = "number"]:focus{
+    border-color:rgb(113, 113, 113);
+}
+
+#line{
+    cursor:pointer;
+}
+
+.inputNumTr-enter-active, .inputNumTr-leave-active{
+    transition: all 0.8s;
+}
+
+.inputNumTr-enter, .inputNumTr-leave-to{
+    transform: translateY(-100%);
+    opacity:0;
+}
+
+hr{
+    width:35%;
+    background-color:rgb(199, 199, 199);
+    border:none;
+    border-radius:1px;
+}
+
+hr:hover{
+    background-color:rgb(171, 168, 168);
+}

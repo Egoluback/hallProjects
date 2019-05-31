@@ -1,0 +1,25 @@
+*{
+    outline:none;
+}
+
+#img-conteiner{
+    background-image:url("map.jpg");
+    background-repeat:no-repeat;
+    background-size:contain;
+    width:65%;
+    height:500px;
+    float:left;
+}
+
+#information{
+    margin:2%;
+    float:left;
+}
+
+#main-info{
+    font-weight:bold;
+}
+
+img{
+    position:absolute;
+}

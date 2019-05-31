@@ -1,0 +1,153 @@
+﻿.butt{
+    width:100px;
+    height:27px;
+    background-color:transparent;
+    cursor:pointer;
+    transition:1s;
+    outline:none;
+}
+.buttHeader{
+    width:80px;
+    border:none;
+    color:white;
+    margin-left:-10px;
+    font-size:12px;
+    position:relative;
+    top:-20px;
+    outline:none;
+}
+.buttHeader:hover{
+    color:rgba(255,255,255,0.5);
+}
+#bigButtHeader{
+    width:100px;    
+}
+#firstButtHeader{
+    margin-left:52px;
+}
+.item{
+    background-color:rgba(255, 255, 255, 0.8);
+    width:30%;
+    float:left;
+    margin-left:3.33%;
+    margin-bottom:20px;
+    border-radius:5px;
+}
+.buttsec{
+    border-style:solid;
+    border-width:1.3px;
+    border-color:black;
+    color:black;
+    border-radius:3px;
+    font-size:12.5px;
+    font-weight:100
+}
+.buttsec:hover{
+    background-color:rgba(0,0,0,0.2);
+}
+.img, .buttsec{
+    margin:30px auto;
+    display:block;
+    width:70%;
+}
+.all{
+    margin:0 auto;
+    width:75%;
+    min-width:480px;
+}
+.contacts{
+    display:inline-block;
+    position:relative;
+    left:6%;
+}
+.phoneNum{
+    font-size:16px;
+    margin-left:55px;
+    top:-12px;
+    font-weight:bold;
+}
+.timesWork{
+    margin-left:94px;
+    top:-10px;
+}
+.phoneNum, .timesWork, .address{
+    position:relative;
+}
+.address{
+    margin-left:108px;
+    top:-8px;
+}
+.timesWork, .address{
+    font-size:9px;
+}
+#firstLinkNavigation{
+    padding-top:15px;
+}
+#lastLinkNavigation{
+    margin-bottom:15px;
+}
+.linkNavigation{
+    padding-left:15px;
+    display:block;
+}
+.linkNavigation a{
+    text-decoration:none;
+    color:black;
+    transition:1s;
+}
+.linkNavigation a:hover{
+    color:rgba(0,0,0,0.2);
+}
+.lineNavigation{
+    position:relative;
+    left:-26%;
+}
+.allAccess{
+    position:relative;
+    left:23%;
+}
+.author{
+    position:relative;
+    left:56%;
+}
+.politics{
+    color:white;
+    position:relative;
+    left:44%;
+}
+.tablePrices{
+    border-collapse:collapse;
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+    border-radius:5px;
+    width:520px;
+}
+section table td{
+    border-style:solid;
+    border-width:1px;
+    border-color:black;
+    padding:7px;
+    text-align:left;
+}
+section table th{
+    border-style:solid;
+    border-width:1px;
+    border-color:black;
+    padding:7px;
+    text-align:left;
+}
+.sectionPrices{
+    width:65%;
+    float:left;
+    background-color:rgba(255, 255, 255, 0.8);
+    border-radius:5px;
+    color:black;
+    font-size:12.5px;
+    padding:15px;
+    margin-left:3.33%;
+    margin-bottom:500px;
+}
+#lastTh{
+    text-align:center;
+}

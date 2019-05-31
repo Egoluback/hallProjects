@@ -1,0 +1,56 @@
+* {
+	
+	padding: 0;
+}
+body {
+	font-family: Comic Sans MS, sans-serif;
+	margin: 0;
+}
+
+.container {
+	text-align: center;
+}
+
+.status p {
+	display: inline-block;
+	padding-right: 50px;
+}
+
+#image {
+	background-image: url(Cat1.jpg);
+	background-size: cover;
+
+	width: 500px;
+	height: 300px;
+	margin-left: 20%;
+	float: left;
+}
+.say {
+	background-image: url(say.png);	
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	width: 260px;
+	height: 200px;
+
+	float: left;
+
+	margin-left: -70px;	
+}
+.say p {
+	margin-top: 70px;
+
+	font-size: 1.3em;
+}
+.content {
+	height: 300px;
+	margin-bottom: 30px;
+}
+form {
+	clear: both;
+}
+form input {
+	margin-right: 20px;
+	padding: 0 10px;
+	height: 30px;
+}

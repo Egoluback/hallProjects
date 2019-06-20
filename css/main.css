@@ -9,7 +9,7 @@ body{
 
 .link-container{
     display: inline-block;
-    font-size: 2em;
+    font-size: 2.5vw;
     margin: 1vw;
 }
 
@@ -21,6 +21,7 @@ header{
 .link{
     text-decoration: none;
     color: rgb(0, 0, 0);
+    transition: color .2s linear;
 }
 
 .link:hover{
@@ -54,7 +55,7 @@ img{
     color: white;
     font-family: 'Oswald', sans-serif;
     background-color: rgb(97, 97, 235);
-    font-size: 1.5em;
+    font-size: 2vw;
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
@@ -63,6 +64,7 @@ img{
     margin-top: 10px;
     color: white;
     text-transform: uppercase;
+    transition: all .2s linear;
 }
 
 #catImg{
@@ -92,12 +94,14 @@ img{
 .image{
     width: 100%;
     height: 75vh;
+    background-repeat: no-repeat;
 }
 
 .content{
     position: relative;
     top: 500px;
     transition: all .6s linear;
+    font-size: 1.2vw;
 }
 
 .block:hover .content{
@@ -113,7 +117,7 @@ img{
 }
 
 .title{
-    font-size: 2.5em;
+    font-size: 2.5vw;
 }
 
 iframe{
@@ -133,4 +137,16 @@ iframe{
     height: 80vh;
     border-radius: 5px;
     background: rgb(241, 241, 241);
+}
+
+#startViewing{
+    font-size: 3vw;
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#startViewing:hover{
+    text-decoration: black underline;
 }

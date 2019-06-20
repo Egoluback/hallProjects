@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href = "css/main.css" rel = "stylesheet">
     <title>Hall</title>
@@ -12,10 +13,10 @@
     <div id = "app">
         <header>
             <div class = "link-container">
-                <a class = "link" href = "#main-container">Ссылки</a>
+                <a class = "link" href = "#main-container">Ссылки и описание</a>
             </div>
             <div class = "link-container">
-                <a class = "link" href = "#iframes-container">Просмотр</a>
+                <a class = "link" href = "#iframes-container">Предпросмотр</a>
             </div>
         </header>
         <div id = "main-container">
@@ -75,25 +76,46 @@
             </div>
         </div>
         <div id = "iframes-container">
-            <div class = "block-iframe">
-                <iframe src = "CatsDay/cats.html" frameborder = "0" height = "100%"></iframe>
-            </div>
-            <div class = "block-iframe">
-                <iframe src = "findtreasures/main.html" frameborder = "0" height = "100%"></iframe>
-            </div>
-            <div class = "block-iframe">
-                <iframe src = "race/main.html" frameborder = "0" height = "100%"></iframe>
-            </div>
-            <div class = "block-iframe">
-                <iframe src = "randomizer/main.html" frameborder = "0" height = "100%"></iframe>
-            </div>
-            <div class = "block-iframe">
-                <iframe src = "snake by canvas/main.html" frameborder = "0" height = "100%"></iframe>
-            </div>
-            <div class = "block-iframe">
-                <iframe src = "store/index.php" frameborder = "0" height = "100%"></iframe>
+            <a id = "startViewing" href = "#iframes-container" @click = "showFrames()">{{ textStartViewing }}</a>
+            <div id = "iframes-hidden-container" v-if = "isShowIframes">
+                <div class = "block-iframe">
+                    <iframe src = "CatsDay/cats.html" frameborder = "0" height = "100%"></iframe>
+                </div>
+                <div class = "block-iframe">
+                    <iframe src = "findtreasures/main.html" frameborder = "0" height = "100%"></iframe>
+                </div>
+                <div class = "block-iframe">
+                    <iframe src = "race/main.html" frameborder = "0" height = "100%"></iframe>
+                </div>
+                <div class = "block-iframe">
+                    <iframe src = "randomizer/main.html" frameborder = "0" height = "100%"></iframe>
+                </div>
+                <div class = "block-iframe">
+                    <iframe src = "snake by canvas/main.html" frameborder = "0" height = "100%"></iframe>
+                </div>
+                <div class = "block-iframe">
+                    <iframe src = "store/index.php" frameborder = "0" height = "100%"></iframe>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                isShowIframes: false,
+                textStartViewing: "Начать просмотр фреймов"
+            },
+            methods:{
+                showFrames: function(){
+                    this.isShowIframes = !this.isShowIframes;
+                    if (this.isShowIframes)
+                        this.textStartViewing = "Завершить просмотр фреймов";
+                    else
+                        this.textStartViewing = "Начать просмотр фреймов";   
+                }
+            }
+        });
+    </script>
 </body>
 </html>

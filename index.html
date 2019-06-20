@@ -104,7 +104,16 @@
             el: "#app",
             data: {
                 isShowIframes: false,
-                textStartViewing: "Начать просмотр фреймов"
+                textStartViewing: "Начать просмотр фреймов",
+                beginScroll: 0
+            },
+            created: function(){
+                setInterval(() => {
+                    if (window.pageYOffset != 0)
+                        document.getElementsByTagName('header')[0].style.cssText = "position: fixed;";
+                    else
+                        document.getElementsByTagName('header')[0].style.cssText = "position: relative;";
+                },100);
             },
             methods:{
                 showFrames: function(){

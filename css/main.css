@@ -45,6 +45,12 @@ img{
     cursor: pointer;
 }
 
+@media(orientation: portrait){
+    .block{
+        height: 25vh;
+    }
+}
+
 .button{
     display: block;
     -webkit-appearance: none;
